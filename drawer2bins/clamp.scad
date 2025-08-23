@@ -1,16 +1,19 @@
 use <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
-use <../drawer/usbchargers.scad>
+use <../scadexamples/drawer/usbchargers.scad>
 
 
 // AA battery holder
 // Tries to pack as many as possible based on tile size
 // Does not try to make it symmetric
 
+SlotWidth=10.7;
+SlotLength=15.1;
+
 $fn=120;
 OverExtrusion = 0.2;
 theanswer=42;
 Unit=theanswer;
-height7=3;
+height7=4;
 heightmm = height7*7+9;
 gridz=height7;
 interval = 16.5;
@@ -46,6 +49,26 @@ difference() {
       style_hole=4 
     );    
   }
-  acpin(BoxLengthUnits*Unit, BoxWidthUnits*Unit,heightmm);
+  translate([-SlotLength/2-2,-SlotWidth,heightmm/2+5])
+    cube([SlotLength+2*OverExtrusion,SlotWidth+2*OverExtrusion,heightmm],center=true);
+  translate([SlotLength/2+2,-SlotWidth,heightmm/2+5])
+    cube([SlotLength+2*OverExtrusion,SlotWidth+2*OverExtrusion,heightmm],center=true);
+
+  translate([-SlotLength/2-2,SlotWidth,heightmm/2+5])
+    cube([SlotLength+2*OverExtrusion,SlotWidth+2*OverExtrusion,heightmm],center=true);
+  translate([SlotLength/2+2,SlotWidth,heightmm/2+5])
+    cube([SlotLength+2*OverExtrusion,SlotWidth+2*OverExtrusion,heightmm],center=true);
+
+
 }
+
+  labelString=str("Clamps");
+  labelHeight=6;
+  labelThickness=2;
+  labelFont="Liberation Sans:style=Bold";
+  translate([0,0,heightmm-9])
+    linear_extrude(height = labelThickness)
+        text(labelString, size=labelHeight, font=labelFont, halign="center", valign="center", spacing=1.1);
+
+//  translate([0,0,heightmm-9])write(labelString, h=labelHeight, t=labelThickness, font=labelFont, center=true, bold=0, space=1.1);
 

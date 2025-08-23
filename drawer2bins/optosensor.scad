@@ -1,5 +1,5 @@
 use <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
-use <../drawer/usbchargers.scad>
+use <../scadexamples/drawer/usbchargers.scad>
 
 
 // AA battery holder
