@@ -1,6 +1,6 @@
 use <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
 use <../scadexamples/drawer/usbchargers.scad>
-use <../Write/Write.scad>
+
 
 
 // AA battery holder
@@ -66,6 +66,7 @@ difference() {
   labelString=str("USB");
   labelHeight=6;
   labelThickness=2;
-  labelFont="Letters.dxf";
-  translate([0,0,heightmm-9])write(labelString, h=labelHeight, t=labelThickness, font=labelFont, center=true, bold=0, space=1.1);
-
+  labelFont="Liberation Sans:style=Bold";
+  translate([0,0,heightmm-9])
+    linear_extrude(height = labelThickness)
+        text(labelString, size=labelHeight, font=labelFont, halign="center", valign="center", spacing=1.1);
