@@ -1,0 +1,6 @@
+*.stl
+*.gcode
+*.png
+*.tmp
+dumplicate.csv
+*.default
