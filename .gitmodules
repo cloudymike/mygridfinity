@@ -7,3 +7,6 @@
 [submodule "Write.scad"]
 	path = Write.scad
 	url = https://github.com/rohieb/Write.scad.git
+[submodule "scadexamples"]
+	path = scadexamples
+	url = https://github.com/cloudymike/scadexamples.git
