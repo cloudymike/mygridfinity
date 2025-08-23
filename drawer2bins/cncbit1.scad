@@ -1,5 +1,5 @@
 use <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
-use <../drawer/usbchargers.scad>
+use <../scadexamples/drawer/usbchargers.scad>
 use <../Write/Write.scad>
 
 
@@ -7,8 +7,8 @@ use <../Write/Write.scad>
 // Tries to pack as many as possible based on tile size
 // Does not try to make it symmetric
 
-SlotWidth=10.7;
-SlotLength=15.1;
+SlotWidth=13;
+SlotLength=13;
 
 $fn=120;
 OverExtrusion = 0.2;
@@ -50,20 +50,20 @@ difference() {
       style_hole=4 
     );    
   }
-  translate([-SlotLength/2-2,-SlotWidth,heightmm/2+5])
+  translate([-SlotLength/2-2,-SlotWidth+2,heightmm/2+5])
     cube([SlotLength+2*OverExtrusion,SlotWidth+2*OverExtrusion,heightmm],center=true);
-  translate([SlotLength/2+2,-SlotWidth,heightmm/2+5])
+  translate([SlotLength/2+2,-SlotWidth+2,heightmm/2+5])
     cube([SlotLength+2*OverExtrusion,SlotWidth+2*OverExtrusion,heightmm],center=true);
 
-  translate([-SlotLength/2-2,SlotWidth,heightmm/2+5])
+  translate([-SlotLength/2-2,SlotWidth-2,heightmm/2+5])
     cube([SlotLength+2*OverExtrusion,SlotWidth+2*OverExtrusion,heightmm],center=true);
-  translate([SlotLength/2+2,SlotWidth,heightmm/2+5])
+  translate([SlotLength/2+2,SlotWidth-2,heightmm/2+5])
     cube([SlotLength+2*OverExtrusion,SlotWidth+2*OverExtrusion,heightmm],center=true);
 
 
 }
 
-  labelString=str("Clamps");
+  labelString=str("CNC bits");
   labelHeight=6;
   labelThickness=2;
   labelFont="Letters.dxf";
