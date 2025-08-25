@@ -1,4 +1,4 @@
-use <thickbaseplatemodule.scad>
+use <../gridfinity/thickbaseplatemodule.scad>
 
   sizeX=178;
   sizeY=136;
