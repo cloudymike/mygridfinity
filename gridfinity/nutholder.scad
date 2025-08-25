@@ -1,6 +1,9 @@
 include <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-utility.scad>
 include <../gridfinity-rebuilt-openscad/standard.scad>
 
+// A tool to hold the M3 nut when screwing together
+// two thickbaseplatemodule
+
 depth=8;
 difference()
 {
