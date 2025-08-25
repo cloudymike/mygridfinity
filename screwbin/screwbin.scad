@@ -56,13 +56,15 @@ module Mscrewbin(
     translate([18-sideOffset(Mtype),18-sideOffset(Mtype),0])TestHoleCutout(Mtype,screwLength, height);
     }
     translate([18-sideOffset(Mtype),18-sideOffset(Mtype),1])TestHole(Mtype,screwLength, height);
-  
+
   labelString=str(Mtype," ",screwLength,"mm");
   labelHeight=6;
   labelThickness=2;
-  labelFont="Letters.dxf";
-  translate([-17,7,height])write(labelString, h=labelHeight, t=labelThickness, font=labelFont, center=false, bold=0, space=1.1);
-  
+  labelFont="Liberation Sans:style=Bold";
+  translate([0,9,height])
+    linear_extrude(height = labelThickness)
+        text(labelString, size=labelHeight, font=labelFont, halign="center", valign="center", spacing=1.1);
+
 }
 
 Mscrewbin("M3",4);
