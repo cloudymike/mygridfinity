@@ -1,6 +1,6 @@
 //use <baseplatemodule.scad>
-use <thickbaseplatemodule.scad>
-use <../electrocookie/knurlpocket.scad>
+use <../gridfinity/thickbaseplatemodule.scad>
+use <../knurl/knurlpocket.scad>
 include <../gridfinity-rebuilt-openscad/standard.scad>
 module FrontLeft()
 {

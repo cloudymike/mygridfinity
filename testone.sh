@@ -2,7 +2,8 @@
 FILE=$1
 IGNOREFILES="./worktable/dimple_vectors.scad ./electrocookie/parameters.scad ./drawer/TOUL.scad"
 # Do not test external libraries imported as submodules
-IGNOREDIRS="./Write.scad "
+# Not used right now but left in for future
+IGNOREDIRS="Write.scad"
 
 SUBMODULES=$(grep "path =" .gitmodules | cut -d '=' -f 2 | tr -d " ")
 DIR="$(dirname "${FILE}")"
