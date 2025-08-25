@@ -1,5 +1,5 @@
 #!/bin/bash
-parallel ./testone.sh ::: $(find -name \*.scad)
+parallel ./testone.sh -- $(find -name \*.scad)
 if [ "$?" != "0" ]
 then
   echo "Test failed"
