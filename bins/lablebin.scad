@@ -1,6 +1,4 @@
 use <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
-use <screwtest.scad>
-use <../Write/Write.scad>
 
 // M screw holder
 // Tries to pack as many as possible based on tile size
@@ -54,18 +52,34 @@ module labelbin(  label="",
     );
   }
   
-  
+
+
   labelHeight=textsize;
   labelThickness=2;
-  labelFont="Letters.dxf";
+  labelFont="Liberation Sans";
+
   if (label2!="") 
   {
-    translate([-17-(BoxLengthUnits-1)*21,17-textsize+(BoxWidthUnits-1)*theanswer/2,height])write(str(label), h=labelHeight, t=labelThickness, font=labelFont, center=false, bold=0, space=1.1);
-    translate([-17-(BoxLengthUnits-1)*21,11-textsize+(BoxWidthUnits-1)*theanswer/2,height])write(str(label2), h=labelHeight, t=labelThickness, font=labelFont, center=false, bold=0, space=1.1);
+    //translate([-17-(BoxLengthUnits-1)*21,17-textsize+(BoxWidthUnits-1)*theanswer/2,height])write(str(label), h=labelHeight, t=labelThickness, font=labelFont, center=false, bold=0, space=1.1);
+    //translate([-17-(BoxLengthUnits-1)*21,11-textsize+(BoxWidthUnits-1)*theanswer/2,height])write(str(label2), h=labelHeight, t=labelThickness, font=labelFont, center=false, bold=0, space=1.1);
+
+    translate([-17-(BoxLengthUnits-1)*21,20-textsize+(BoxWidthUnits-1)*theanswer/2,height])
+        linear_extrude(height = labelThickness)
+            text(label, size=labelHeight, font=labelFont, halign="left", valign="center", spacing=1.1);
+
+    translate([-17-(BoxLengthUnits-1)*21,14-textsize+(BoxWidthUnits-1)*theanswer/2,height])
+        linear_extrude(height = labelThickness)
+            text(label2, size=labelHeight, font=labelFont, halign="left", valign="center", spacing=1.1);
+
+
+
   }
   else
-    translate([-17-(BoxLengthUnits-1)*21,15-textsize+(BoxWidthUnits-1)*theanswer/2,height])write(str(label), h=labelHeight, t=labelThickness, font=labelFont, center=false, bold=0, space=1.1);
+    //translate([-17-(BoxLengthUnits-1)*21,15-textsize+(BoxWidthUnits-1)*theanswer/2,height])write(str(label), h=labelHeight, t=labelThickness, font=labelFont, center=false, bold=0, space=1.1);
+    translate([-17-(BoxLengthUnits-1)*21,18-textsize+(BoxWidthUnits-1)*theanswer/2,height])
+        linear_extrude(height = labelThickness)
+            text(label, size=labelHeight, font=labelFont, halign="left", valign="center", spacing=1.1);
     
 }
 
-labelbin("1N4004",label2="", BoxWidthUnits=2, divx=1);
+labelbin("1N4004",label2="diode", BoxLengthUnits=2, BoxWidthUnits=1, divx=1);
