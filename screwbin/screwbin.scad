@@ -1,6 +1,6 @@
 use <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
 use <screwtest.scad>
-use <../Write/Write.scad>
+
 
 // M screw holder
 // Tries to pack as many as possible based on tile size
