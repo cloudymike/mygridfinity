@@ -1,5 +1,4 @@
-//use <baseplatemodule.scad>
-use <../gridfinity/thickbaseplatemodule.scad>
+use <../baseplates/thickbaseplatemodule.scad>
 use <../knurl/knurlpocket.scad>
 include <../gridfinity-rebuilt-openscad/standard.scad>
 module FrontLeft()

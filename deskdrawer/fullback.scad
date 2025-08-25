@@ -1,3 +1,3 @@
-use <../gridfinity/thinbaseplate.scad>
+use <../baseplates/thinbaseplate.scad>
 
 thinBaseplate(4,1,0,54);
