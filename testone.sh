@@ -1,6 +1,6 @@
 #!/bin/bash
 FILE=$1
-IGNOREFILES="./worktable/dimple_vectors.scad ./electrocookie/parameters.scad ./drawer/TOUL.scad"
+IGNOREFILES="./worktable/dimple_vectors.scad ./electrocookie/parameters.scad ./drawer/TOUL.scad ./tooltrace/fix2d.scad"
 # Do not test external libraries imported as submodules
 # Not used right now but left in for future
 IGNOREDIRS="Write.scad"
