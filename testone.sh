@@ -15,9 +15,9 @@ then
   TOPDIR=`echo $DIR | cut -f 2 -d '/'`
 fi
 
-#echo $SUBMODULES
-#echo $TOPDIR
-#echo $SUBMODULES | grep -wq $TOPDIR
+echo $SUBMODULES
+echo $TOPDIR
+echo $SUBMODULES | grep -wq $TOPDIR
 
 if echo $SUBMODULES | grep -wq $TOPDIR
 then
@@ -42,7 +42,8 @@ else
       echo "FAIL: $FILE"
       exit 1
     else
-      rm -f $STLFILE
+      #rm -f $STLFILE
+      echo " "
     fi
   fi
   popd &> /dev/null
