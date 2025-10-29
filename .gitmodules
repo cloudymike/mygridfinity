@@ -10,3 +10,6 @@
 [submodule "scadexamples"]
 	path = scadexamples
 	url = https://github.com/cloudymike/scadexamples.git
+[submodule "OpenSCAD_Dovetail"]
+	path = OpenSCAD_Dovetail
+	url = https://github.com/hugokernel/OpenSCAD_Dovetail
