@@ -8,10 +8,10 @@ https://www.homedepot.com/p/Everbilt-3-4-in-x-4-ft-1-16-in-Thick-Aluminum-Angle-
 Screws:
 * Front #6 5/8
 * Back  #6 5/8
-* Middle #4 3/4
+* Middle #6 5/8 or #4 3/4
 
 Peg: shelf peg 5X16mm
 
-The middle screw needs to be a bit smaller as the slide role needs to pass it.
+The middle may screw need to be a bit smaller as the slide role needs to pass it. Try withlarger first.
 
 For mounting use 5mm pegs for front and middle holder as they line up with peg holes. For back there is no alignment, just line up with screw hole on rail.
