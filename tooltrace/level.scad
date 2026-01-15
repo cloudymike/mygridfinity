@@ -39,4 +39,4 @@ else
   intersection() {import(stl);cutter([0, 10, 0], Cube_dimension, teeth, true, Debug_flag);}
 }
 
-cutTooltrace(stl="level.stl",front=false);
+cutTooltrace(stl="level.STL",front=false);
