@@ -39,4 +39,6 @@ else
   intersection() {import(stl);cutter([0, 10, 0], Cube_dimension, teeth, true, Debug_flag);}
 }
 
+// Uncomment for 2d for outline print
+//projection(cut=true) translate([0, 0, -10])
 cutTooltrace(stl="level.STL",front=false);

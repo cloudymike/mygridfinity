@@ -71,4 +71,7 @@ else
 }
 
 cutTooltrace(front=true);
+
+// Uncomment for 2d for outline print
+//projection(cut=true) translate([0, 0, -10])
 //stlwithbits();
