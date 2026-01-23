@@ -7,7 +7,7 @@ use <../OpenSCAD_Dovetail/dovetail.scad>;
 /* [Teeth] */
 
 // Teeth count
-Teeth_count = 5; // [2:10]
+Teeth_count = 4; // [2:10]
 
 // Teeth height
 Teeth_height = 8; // [2:20]
