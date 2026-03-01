@@ -5,7 +5,8 @@ use <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
 // Does not try to make it symmetric
 module screwBit(
   BoxLengthUnits=1,
-  BoxWidthUnits=1
+  BoxWidthUnits=1,
+  MagnetHoles=4
 )
 {
   $fn=120;
@@ -17,7 +18,7 @@ module screwBit(
   diameter=7.4+2*OverExtrusion;
   
   BoxUnits=42;
-  StyleHole=4; // [0:no holes, 1:magnet holes only, 2: magnet and screw holes - no printable slit, 3: magnet and screw holes - printable slit, 4: Gridfinity Refined hole - no glue needed]
+  StyleHole=MagnetHoles; // [0:no holes, 1:magnet holes only, 2: magnet and screw holes - no printable slit, 3: magnet and screw holes - printable slit, 4: Gridfinity Refined hole - no glue needed]
   WallAdjust = 1.5;
   WallXAdjust = BoxLengthUnits==1 ? 1.5 : 1;
   WallYAdjust = BoxLengthUnits==1 ? 1.5 : 0.9;
@@ -30,7 +31,7 @@ module screwBit(
         l=theanswer, 
         dx=0, 
         dy=0, 
-        style_hole=4 
+        style_hole=StyleHole 
       );
     }
     translate([-BoxLengthUnits*BoxUnits/2,-BoxWidthUnits*BoxUnits/2,5])
@@ -40,4 +41,4 @@ module screwBit(
   }
 }
 
-screwBit(2,2);
+screwBit(1,1,0);
