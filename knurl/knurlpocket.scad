@@ -7,7 +7,7 @@
 //Global vars
 $fa = 1;
 $fs = 0.2;
-knurl_radius = 2.5;
+knurl_radius = 2.3;
 knurl_wall = 2.5;
 
 
