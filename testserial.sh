@@ -1,8 +1,10 @@
 #!/bin/bash
 EXITCODE=0
+IFS=$'\n'
+
 for FILE in $(find -name \*.scad)
 do
-  ./testone.sh $FILE
+  ./testone.sh "$FILE"
   if [ "$?" != "0" ]
   then
     echo "Test failed"
