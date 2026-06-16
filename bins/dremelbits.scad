@@ -10,7 +10,7 @@ theanswer=42;
 height7=3;
 height = height7*7;
 interval = 7;
-diameter=3.15+2*OverExtrusion;
+diameter=3.0+2*OverExtrusion;
 
 BoxUnits=42;
 BoxLengthUnits=1;
