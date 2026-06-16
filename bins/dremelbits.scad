@@ -15,7 +15,7 @@ diameter=3.15+2*OverExtrusion;
 BoxUnits=42;
 BoxLengthUnits=1;
 BoxWidthUnits=1;
-StyleHole=4; // [0:no holes, 1:magnet holes only, 2: magnet and screw holes - no printable slit, 3: magnet and screw holes - printable slit, 4: Gridfinity Refined hole - no glue needed]
+StyleHole=0; // [0:no holes, 1:magnet holes only, 2: magnet and screw holes - no printable slit, 3: magnet and screw holes - printable slit, 4: Gridfinity Refined hole - no glue needed]
 WallAdjust = 2;
 difference () {
   union () {
@@ -26,7 +26,7 @@ difference () {
       l=theanswer, 
       dx=0, 
       dy=0, 
-      style_hole=4 
+      style_hole=StyleHole 
     );
   }
   translate([-BoxLengthUnits*BoxUnits/2,-BoxWidthUnits*BoxUnits/2,5])
