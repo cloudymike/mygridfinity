@@ -1,7 +1,7 @@
 use <../gridfinity-rebuilt-openscad/gridfinity-rebuilt-bins.scad>
 
 
-module dremeldisk(
+module smalldremeldisk(
   label="", 
   label2="",
   BoxLengthUnits=1,
@@ -14,8 +14,8 @@ module dremeldisk(
     height7=3;
     height = height7*7;
     intervalX = 38;
-    intervalY = 40;
-    diameter=26+2*OverExtrusion;
+    intervalY = 33;
+    diameter=19.85+2*OverExtrusion;
     cylinderHeight=theanswer-8;
     
     BoxUnits=42;
@@ -46,7 +46,10 @@ module dremeldisk(
     translate([-17-(BoxLengthUnits-1)*21,19-textsize+(BoxWidthUnits-1)*theanswer/2,height])
         linear_extrude(height = labelThickness)
             text(label, size=labelHeight, font=labelFont, halign="left", valign="center", spacing=1.1);
+    translate([-17-(BoxLengthUnits-1)*21,19-2.3*textsize+(BoxWidthUnits-1)*theanswer/2,height])
+        linear_extrude(height = labelThickness)
+            text(label2, size=labelHeight, font=labelFont, halign="left", valign="center", spacing=1.1);
 
 }
 
-dremeldisk(label="P10000");
+smalldremeldisk(label="Grinding", label2="Metal");
