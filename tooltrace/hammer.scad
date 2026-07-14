@@ -39,4 +39,10 @@ else
   intersection() {import(stl);cutter([0, 10, 0], Cube_dimension, teeth, true, Debug_flag);}
 }
 
-cutTooltrace(stl="hammer.STL",front=true);
+// Test layout. Remove diff for real
+difference()
+{
+cutTooltrace(stl="hammer.STL",front=false);
+    cube([3*42,7*42,20],center=true);
+    translate([0,0,21])cube([3*42,7*42,20],center=true);
+}
