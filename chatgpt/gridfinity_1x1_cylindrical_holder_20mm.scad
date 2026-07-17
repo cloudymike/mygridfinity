@@ -1,6 +1,10 @@
 /*
 Gridfinity 1x1 cylindrical holder
 ---------------------------------
+PROMPT:
+Create a standalone OpenSCAD model of a 1×1 Gridfinity holder, 41.5 × 41.5 mm and 20 mm tall. Use a true Gridfinity base socket based on block_base_solid() from gridfinity-rebuilt-openscad. Add a centered cylindrical pocket, 28 mm diameter, open at the top, with a 1.2 mm floor above the Gridfinity base. No magnet or screw holes. Output only the .scad file.
+
+
 Overall height: 20 mm
 Grid footprint: 1 x 1
 Pocket diameter: 28 mm
