@@ -7,7 +7,9 @@ Standalone 3x3 Gridfinity cylindrical holder
 - Annular channel: 3 mm wide, inner edge 2 mm outside pocket
 - 5 mm wide radial connection between pocket and channel
 - No magnet or screw holes
-*/
+
+PROMPT:
+Create a standalone OpenSCAD model of a 3×3 Gridfinity holder, each gridfinity square 42x42mm 15 mm tall. Use a true Gridfinity base socket based on block_base_solid() from gridfinity-rebuilt-openscad. Add a centered cylindrical pocket, 103 mm diameter, open at the top, with a 1.2 mm floor above the Gridfinity base. Create a 3mm  channel 2mm outside of the cylindrical pocket, the same depth as the pocket. Make a connection between the cylindrical pocket, 5mm wide at one side. No magnet or screw holes. Output only the .scad file.*/
 
 $fn = 160;
 
