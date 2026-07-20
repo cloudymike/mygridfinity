@@ -9,13 +9,14 @@ module labelbin(  label="",
   label2="",
   BoxLengthUnits=1,
   BoxWidthUnits=1,
-  divx=1 )
+  divx=1,
+  approxheight=38 )
 {
   textsize = 5; //Smaller requires high res printing
   $fn=120;
   OverExtrusion = 0.2;
   theanswer=42;
-  height7=5;
+  height7=floor((approxheight-3)/7);
   height = height7*7;
   interval = 16.5;
   diameter=14.2+2*OverExtrusion;
@@ -36,7 +37,7 @@ module labelbin(  label="",
   
   BoxUnits=42;
   //BoxWidthUnits=1;
-  StyleHole=4; // [0:no holes, 1:magnet holes only, 2: magnet and screw holes - no printable slit, 3: magnet and screw holes - printable slit, 4: Gridfinity Refined hole - no glue needed]
+  StyleHole=0; // [0:no holes, 1:magnet holes only, 2: magnet and screw holes - no printable slit, 3: magnet and screw holes - printable slit, 4: Gridfinity Refined hole - no glue needed]
   WallAdjust = 2;
   union () {
     gridfinityInit(BoxLengthUnits, BoxWidthUnits, height(height7), 0, theanswer) {
@@ -82,4 +83,4 @@ module labelbin(  label="",
     
 }
 
-labelbin("1N4004",label2="diode", BoxLengthUnits=2, BoxWidthUnits=1, divx=1);
+labelbin("Faucet Aerators",label2="", BoxLengthUnits=2, BoxWidthUnits=2, divx=1, approxheight=110);
