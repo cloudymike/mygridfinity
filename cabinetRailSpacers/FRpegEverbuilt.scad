@@ -1,4 +1,5 @@
 
+use <../scadexamples/mscrew/countersinkhole.scad>
 railX=37.0;
 railY=40;
 railZ=10;
@@ -16,9 +17,19 @@ module FRpegEverbuilt()
 {
 difference() {
     cube([railX,railY,railZ],center=true);
-    translate([holeX,hole1Y,0])cylinder(d=holeD,h=railZ+0.01,$fn=64,center=true);
+
+    //Use this hole to fasten the rail
     translate([holeX,hole2Y,0])cylinder(d=holeD,h=railZ+0.01,$fn=64,center=true);
+
+    // Use this hole to fasten and level the rail holder
+    countersinkTop=7;
+    countersinkBottom=35;
+    countersinkDepth=2.5;
+    translate([holeX,hole1Y,0])cylinder(d=holeD,h=railZ+0.01,$fn=64,center=true);
+    translate([holeX,hole1Y,railZ/2])rotate([0,180,0])countersink(5,2,countersinkDepth);
+
     translate([guardholeX,guardholeY,0])cylinder(d=guardholeD,h=railZ+0.01,$fn=64,center=true);
+    
 }
 
 //Frame
