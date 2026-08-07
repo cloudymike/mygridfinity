@@ -2,7 +2,7 @@
 use <../scadexamples/mscrew/countersinkhole.scad>
 railX=37.0;
 railY=40;
-railZ=10;
+railZ=9;
 holeD=4.8;
 holeX=railX/2-6.8;
 hole1Y=-railY/2+5;
